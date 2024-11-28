@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="alarm.css">
-</head>
+    <link rel="stylesheet" href="alarm.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <a href="alarm.html">Alarm</a>
-            <a href="index.html">Clock</a>
-            <a href="stopwatch.html">Stopwatch</a>
-            <a href="timer.html">Timer</a>
-        </nav>
+      <nav>
+        <a href="alarm.html">Alarm</a>
+        <a href="index.html">Clock</a>
+        <a href="stopwatch.html">Stopwatch</a>
+        <a href="timer.html">Timer</a>
+      </nav>
     </header>
     <h1 id="alarm-heading">Alarm</h1>
     <form action="" id="input-form">
-        <input type="time" id="input-time">
-        <div id="repeat">
-            <span>Repeat : </span>
-            <input type="checkbox" value="SUN">SUN
-            <input type="checkbox" value="Mon">MON
-            <input type="checkbox" value="Tue">TUE
-            <input type="checkbox" value="Wed">WED
-            <input type="checkbox" value="Thu">THU
-            <input type="checkbox" value="Fri">FRI
-            <input type="checkbox" value="Sat">SAT
-        </div>
-        <select name="" id="ringtone">
-            <option value="bihari.mpeg">bihari</option>
-            <option value="crisp_ring.mp3">Crisp Ring</option>
-        </select>
-        <button type="submit" id="set-btn">Set Alarm</button>
+      <input type="time" id="input-time" />
+      <div id="repeat">
+        <span>Repeat : </span>
+        <input type="checkbox" value="SUN" />SUN
+        <input type="checkbox" value="Mon" />MON
+        <input type="checkbox" value="Tue" />TUE
+        <input type="checkbox" value="Wed" />WED
+        <input type="checkbox" value="Thu" />THU
+        <input type="checkbox" value="Fri" />FRI
+        <input type="checkbox" value="Sat" />SAT
+      </div>
+      <select name="" id="ringtone">
+        <option value="alarm2.mp3">Hillary</option>
+        <option value="crisp_ring.mp3">Crisp Ring</option>
+      </select>
+      <button type="submit" id="set-btn">Set Alarm</button>
     </form>
     <div id="alarm-container"></div>
     <!-- <button id="edit-btn">Edit</button> -->
     <script src="alarm.js"></script>
-</body>
-
+  </body>
 </html>
