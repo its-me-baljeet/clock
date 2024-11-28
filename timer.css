@@ -1,0 +1,236 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff, #fde68a);
+    font-family: Arial, sans-serif;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header styles */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+nav {
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #ca8a04;
+    color: white;
+    box-shadow: 0 3px 10px rgba(202, 138, 4, 0.4);
+}
+
+/* Heading styles */
+#timer-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease;
+}
+
+/* Timer container styles */
+#timer-container {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ca8a04;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: white;
+}
+
+/* Form styles */
+#input-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+#input-form input {
+    width: 80px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ca8a04;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#input-form input:focus {
+    border-color: #854d0e;
+    box-shadow: 0 3px 8px rgba(133, 77, 14, 0.4);
+}
+
+#input-form button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #ca8a04;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#input-form button:hover {
+    background: #854d0e;
+    box-shadow: 0 5px 15px rgba(133, 77, 14, 0.4);
+}
+
+/* Buttons */
+button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #ca8a04;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+button:hover {
+    background: #854d0e;
+    box-shadow: 0 5px 15px rgba(133, 77, 14, 0.4);
+}
+
+#stop-btn {
+    background: #e11d48;
+}
+
+#stop-btn:hover {
+    background: #be123c;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #timer-heading {
+        font-size: 2.5rem;
+    }
+
+    #timer-container {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    #input-form input {
+        width: 60px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    #timer-heading {
+        font-size: 2rem;
+    }
+
+    #timer-container {
+        font-size: 1.8rem;
+        padding: 8px 15px;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    #input-form input {
+        width: 50px;
+        padding: 6px;
+    }
+}
